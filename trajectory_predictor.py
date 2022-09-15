@@ -120,7 +120,7 @@ class TrajectoryPredictor:
             ADE_mean = round(np.mean(ADE_list), 3)
             ADE_min = round(np.min(ADE_list), 3)
             top_k_ADE_by_timestep = round(np.mean(np.min(traj_error_array_for_one_time_index, axis=0)), 3)
-            data_row = [self.person_id, time_index*self.delta_t, FDE_mean, FDE_min, ADE_mean, ADE_min, top_k_ADE_by_timestep, num_predicted_trajs]
+            data_row = [self.person_id, round(time_index*self.delta_t, 1), FDE_mean, FDE_min, ADE_mean, ADE_min, top_k_ADE_by_timestep, num_predicted_trajs]
 
             if time_index >= 20:
                 res_FDE = FDE_mean

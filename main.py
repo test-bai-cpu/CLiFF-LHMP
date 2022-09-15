@@ -43,7 +43,7 @@ def run_experiment(dataset, map_file, mod_file, ground_truth_data_file, result_f
         writer.writerow(header)
 
     # Example person ids for testing
-    # person_id_list = [13185100] # ATC
+    person_id_list = [13185100] # ATC
     # person_id_list = [12063] # THÖR1
     # person_id_list = [32096] # THÖR3
 
@@ -88,7 +88,8 @@ def main_atc():
     beta = 1
     sample_radius = 1
     delta_t = 1
-    method = utils.Method.CVM
+    method = utils.Method.MoD
+    # method = utils.Method.CVM
     dataset = utils.Dataset.ATC
     run_experiment(dataset, map_file, mod_file, ground_truth_data_file, result_file, observed_tracklet_length, start_length, planning_horizon, beta, sample_radius, delta_t, method)
 
@@ -104,6 +105,7 @@ def main_thor1():
     sample_radius = 0.5
     delta_t = 0.4
     method = utils.Method.MoD
+    # method = utils.Method.CVM
     dataset = utils.Dataset.THOR1
     run_experiment(dataset, map_file, mod_file, ground_truth_data_file, result_file, observed_tracklet_length, start_length, planning_horizon, beta, sample_radius, delta_t, method)
 
@@ -119,8 +121,9 @@ def main_thor3():
     sample_radius = 0.5
     delta_t = 0.4
     method = utils.Method.MoD
+    # method = utils.Method.CVM
     dataset = utils.Dataset.THOR3
     run_experiment(dataset, map_file, mod_file, ground_truth_data_file, result_file, observed_tracklet_length, start_length, planning_horizon, beta, sample_radius, delta_t, method)
 
 if __name__ == "__main__":
-    main_thor3()
+    main_atc()
