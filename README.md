@@ -1,6 +1,6 @@
-# MoD-LHMP
+# CLiFF-LHMP
 
-MoD-LHMP is a pattern-based human motion prediction approach. Provided with maps of dynamics, the method predicts human motion in a long term.
+CLiFF-LHMP is a pattern-based human motion prediction approach. Provided with maps of dynamics, the method predicts human motion in a long term.
 
 1. The following two datasets are supported:
 - [ATC pedestrian tracking dataset](https://dil.atr.jp/ISL/crest2010_HRI/ATC_dataset/)
@@ -10,7 +10,7 @@ Part of both datasets are put in `dataset` folder for demo. The dataset files pr
 
 
 2. Two prediction approaches are supported:
-- MoD-LHMP: use maps of dynamics for prediction
+- CLiFF-LHMP: use maps of dynamics for prediction
 - CVM: use constant velocity model for prediction
 
 
